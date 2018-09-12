@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
            Bundle bundleResultado = data.getExtras();
            String matricula = bundleResultado.getString(MainActivity.ALUNO_MATRICULA);
            String nome = bundleResultado.getString(MainActivity.ALUNO_NOME);
-           Toast.makeText(getApplicationContext(), "ALUNO: "+nome+ "MATRICULA"+matricula, Toast.LENGTH_SHORT).show();
+           Toast.makeText(getApplicationContext(), "ALUNO: "+nome+ " MATRICULA: "+matricula, Toast.LENGTH_SHORT).show();
            contAluno++;
            txtQtdAluno.setText(Integer.toString(contAluno));
 
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundleResultado = data.getExtras();
             String email = bundleResultado.getString(MainActivity.EXTERNO_EMAIL);
             String nome = bundleResultado.getString(MainActivity.EXTERNO_NOME);
-            Toast.makeText(getApplicationContext(), "EXTERNO: "+nome+ "EMAIL"+email, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "EXTERNO: "+nome+ " EMAIL: "+email, Toast.LENGTH_SHORT).show();
             contExterno++;
             txtQtdExterno.setText(Integer.toString(contExterno));
         }else if(requestCode == MainActivity.REQUEST_SIAPE && resultCode== Activity.RESULT_OK && data != null){
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundleResultado = data.getExtras();
             String siape = bundleResultado.getString(MainActivity.SERVIDOR_SIAPE);
             String nome = bundleResultado.getString(MainActivity.SERVIDOR_NOME);
-            Toast.makeText(getApplicationContext(), "EXTERNO: "+nome+ "EMAIL"+siape, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "EXTERNO: "+nome+ " EMAIL: "+siape, Toast.LENGTH_SHORT).show();
             contServidor++;
             txtQtdServidor.setText(Integer.toString(contServidor));
         }

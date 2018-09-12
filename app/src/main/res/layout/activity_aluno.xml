@@ -7,6 +7,18 @@
     tools:context=".AlunoActivity">
 
     <EditText
+        android:id="@+id/edt_Text_Aluno_Nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:ems="10"
+        android:hint="Digite o seu nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/edt_Text_Aluno_Matricula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,17 +38,6 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_Text_Aluno_Nome"
         app:layout_constraintVertical_bias="0.035" />
 
-    <EditText
-        android:id="@+id/edt_Text_Aluno_Nome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:ems="10"
-        android:hint="Digite o seu nome"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_Aluno_Cadastrar"
