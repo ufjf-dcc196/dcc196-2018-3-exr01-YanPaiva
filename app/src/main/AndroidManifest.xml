@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AlunoActivity" />
-        <activity android:name=".ServidorActivity"></activity>
+        <activity android:name=".ServidorActivity" />
+        <activity android:name=".ExternoActivity"></activity>
     </application>
 
 </manifest>
