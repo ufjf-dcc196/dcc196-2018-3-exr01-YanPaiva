@@ -64,6 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,  REQUEST_EMAIL);
             }
         });
+        btnServidor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ServidorActivity.class);
+                startActivityForResult(intent,  REQUEST_SIAPE);
+            }
+        });
     }
 
     @Override
@@ -85,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "EXTERNO: "+nome+ "EMAIL"+email, Toast.LENGTH_SHORT).show();
             contExterno++;
             txtQtdExterno.setText(Integer.toString(contExterno));
+        }else if(requestCode == MainActivity.REQUEST_SIAPE && resultCode== Activity.RESULT_OK && data != null){
+
+            Bundle bundleResultado = data.getExtras();
+            String siape = bundleResultado.getString(MainActivity.SERVIDOR_SIAPE);
+            String nome = bundleResultado.getString(MainActivity.SERVIDOR_NOME);
+            Toast.makeText(getApplicationContext(), "EXTERNO: "+nome+ "EMAIL"+siape, Toast.LENGTH_SHORT).show();
+            contServidor++;
+            txtQtdServidor.setText(Integer.toString(contServidor));
         }
     }
 }
